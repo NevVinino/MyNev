@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d; /* Color sacado de tu imagen */
+    color: #f0f0f0;            /* Texto claro para buen contraste */
+    padding-top: 70px;         /* Espacio para el navbar fijo */
+}
+
+header {
+    background: #007acc;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+div.header {
+    background-color: #313131;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+div {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #007acc;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.2rem;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007acc;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    margin-top: 2rem;
+}
+
+/* --- NUEVO: Navbar horizontal --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+    z-index: 999;
+}
+
+/* Menú horizontal dentro del navbar */
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar nav a {
+    color: #f0f0f0;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #007acc;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
