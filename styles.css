@@ -93,3 +93,43 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* Sección habilidades programación */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+}
+
+.skill-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  cursor: default;
+  color: #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.skill-list li:hover {
+  transform: scale(1.1);
+}
+
+.skill-list img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 2px #007acc);
+}
+
+.skill-list span {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #aad4ff;
+}
