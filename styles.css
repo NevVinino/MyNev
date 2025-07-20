@@ -133,3 +133,64 @@ html {
   text-align: center;
   color: #aad4ff;
 }
+
+/* Estilo para la lista principal de certificados */
+.skill-list-certificate {
+  list-style: none;              /* Quita los puntos de la lista principal */
+  padding: 0;                    /* Elimina el padding interno */
+  margin: 0;                     /* Elimina el margen externo */
+  display: flex;                 /* Usa flexbox para organizar en columna */
+  flex-direction: column;       /* Asegura que cada <li> esté en una fila vertical */
+  gap: 1.2rem;                   /* Espacio vertical entre cada certificado */
+  color: #f0f0f0;                /* Color de texto claro para el fondo oscuro */
+}
+
+/* Estilo para cada ítem de la lista de certificados */
+.skill-list-certificate li {
+  line-height: 1.6;              /* Mejora la legibilidad con mayor espacio entre líneas */
+  font-size: 1rem;               /* Tamaño de fuente estándar y claro */
+}
+
+/* Estilo para las sublistas (por ejemplo, los cursos dentro de Cisco o PIT UNI) */
+.skill-list-certificate li ul {
+  list-style: disc;              /* Usa viñetas normales para subítems */
+  margin-left: 1.5rem;           /* Indenta hacia la derecha para diferenciar jerarquía */
+  margin-top: 0.5rem;            /* Espacio entre el título y la sublista */
+}
+
+/* Estilo para los nombres de instituciones (PIT UNI, Cisco, etc.) */
+.skill-list-certificate strong {
+  color: #aad4ff;                /* Azul suave para destacar la institución */
+  font-weight: bold;            /* Negrita para dar más jerarquía visual */
+}
+
+
+/* Estilo para la lista de experiencia laboral o académica */
+.experience-list {
+  list-style: none;              /* Qita viñetas predeterminadas */
+  padding: 0;
+  margin: 0;
+  display: flex;                 /* Organiza verticalmente los ítems */
+  flex-direction: column;
+  gap: 1.2rem;                   /* Espacio entre experiencias */
+  color: #f0f0f0;                /* Color de texto acorde al fondo oscuro */
+}
+
+/* Cada entrada de experiencia */
+.experience-list li {
+  line-height: 1.6;              /* Aumenta legibilidad entre líneas */
+  font-size: 1rem;
+}
+
+/* Sublistas dentro de experiencia (si hay detalles o funciones) */
+.experience-list li ul {
+  list-style: disc;              /* Viñetas normales */
+  margin-left: 1.5rem;           /* Indentación para jerarquía */
+  margin-top: 0.5rem;
+}
+
+/* Destacar título del puesto o institución */
+.experience-list strong {
+  color: #aad4ff;                /* Azul claro para resaltar */
+  font-weight: bold;
+}
