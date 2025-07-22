@@ -10,15 +10,23 @@
 </head>
 <body>
 
-    <!-- Barra de navegación -->
+        <!-- Barra de navegación -->
     <div class="navbar">
-    <nav>
+    <div class="nav-container">
+        <div class="logo">Mi Portafolio</div>
+
+        <!-- Botón hamburguesa -->
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+        <!-- Enlaces de navegación -->
+        <nav class="nav-links" id="nav-links">
         <a href="#sobre-mi">Sobre Mí</a>
         <a href="#certificate">Certificados</a>
         <a href="#skills-programming">Habilidades de Programación</a>
         <a href="#experience">Experiencia</a>
         <a href="#contact">Contacto</a>
-    </nav>
+        </nav>
+    </div>
     </div>
 
 
@@ -31,9 +39,23 @@
     <!-- Sección: Sobre mí -->
     <div class="section about" id="sobre-mi">
         <h2 class="section-title">Sobre mí</h2>
-        <p>Bachiller en Ingeniería de Sistemas con experiencia en soporte TI, desarrollo web y gestióin de bases de datos.
-        Motivado por aprender y aplicar tecnologías modernas en entornos corporativos reales.</p>
+        <h1>¡Hola!</h1>
+        <p>
+            Tengo 23 años y soy de Lima, 
+            <span class="bandera-peru">
+            Perú <img src="peru.gif" alt="Bandera de Perú">
+            </span>
+        </p>
+        <p>
+            Soy bachiller en Ingeniería de Sistemas por la Universidad Tecnológica 
+            del Perú (UTP), con experiencia laboral en Soporte TI, y conocimientos
+            en proyectos de Desarrollo Web e Inteligencia de negocios.
+            Me gusta trabajar en equipo, aportar ideas, enfrentar retos
+            y hacer preguntas cuando no sé algo, porque eso me ayuda a seguir 
+            creciendo profesionalmente.
+        </p>
     </div>
+
 
     <!-- Sección: Certificados -->
     <div class="section skills" id="certificate">
@@ -70,45 +92,111 @@
         <ul class="skill-list">
             <li>
                 <img src="html.png" alt="HTML" />
-                <span>HTML</span>
+                <span>HTML (Intermedio)</span>
             </li>
 
             <li>
                 <img src="css.png" alt="CSS" />
-                <span>CSS</span>
+                <span>CSS (Intermedio)</span>
             </li>
 
             <li>
                 <img src="js.png" alt="JavaScript" />
-                <span>JavaScript</span>
+                <span>JavaScript (Básico)</span>
             </li>
 
             <li>
                 <img src="Laravel.png" alt="PHP (Laravel)" />
-                <span>PHP (Laravel)</span>
+                <span>PHP (Laravel) (Intermedio)</span>
             </li>
             
             <li>
                 <img src="git.png" alt="Git" />
-                <span>Git</span>
+                <span>Git (Básico)</span>
             </li>
             
             <li>
                 <img src="github.png" alt="GitHub" />
-                <span>GitHub</span>
+                <span>GitHub (Básico)</span>
+            </li>
+        </ul>
+    </div>
+
+            <!-- Sección: Habilidades Inteligencia de negocios -->
+    <div class="section skills programming" id="skills-programming">
+        <h2 class="section-title">Habilidades de Inteligencia de Negocios</h2>
+        <ul class="skill-list">   
+            <li>
+                <img src="sqlServer.png" alt="SQL" />
+                <span>SQL Server (Intermedio)</span>
+            </li>
+
+            <li>
+                <img src="powerbi.png" alt="Power BI" />
+                <span>Power BI (Básico)</span>
+            </li>         
+        </ul>
+    </div>
+
+
+
+<!-- Sección: Experiencia -->
+    <div class="section experience" id="experience">
+        <h2 class="section-title">Experiencia Laboral</h2>
+        <ul class="experience-list">
+            <li>
+                <strong>Prácticas Preprofesionales - Área de Soporte TI</strong>
+                <p>Empresa: Enproyec | RUC: 203307911701</p>
+                <p>Tiempo: 8 enero 2024 – 8 abril 2025 (1 año y 3 meses)</p>
+                <p>Lima Perú</p>
+
+                <ul>
+                    <li>
+                        Ejecuté tareas de soporte técnico (Helpdesk), resolviendo 
+                        incidencias y configurando estaciones de trabajo, impresoras 
+                        y dispositivos de red para usuarios finales.
+                    </li>
+                    
+                    <li>
+                        Colaboré en la administración de Microsoft Active 
+                        Directory, gestionando usuarios, carpetas 
+                        compartidas, servicios de DNS, DHCP y acceso remoto 
+                        dentro del dominio corporativo.
+                    </li>
+
+                    <li>
+                        Participé en el mantenimiento de servidores, 
+                        incluyendo reemplazo de hardware, gestión y 
+                        restauración de imágenes de sistema.
+                    </li>
+                    
+                    <li>
+                        Realicé tareas de mantenimiento en bases de datos: restauración
+                        de respaldos, monitoreo de jobs y migración de servidores de
+                        base de datos. 
+                    </li>
+                    
+                    <li>
+                        Apoyé en la implementación de políticas de seguridad, supervisión 
+                        de firewalls y coordinación con proveedores externos para asegurar 
+                        la conectividad.
+                    </li>
+
+                    <li>
+                        Contribuí en proyectos de desarrollo de software como BackOffice 
+                        (ERP), realizando pruebas funcionales y validación técnica.
+                    </li>
+
+                    <li>
+                        Elaboré documentación técnica y gestioné el inventario de activos
+                        informáticos, optimizando los procesos del área de TI.
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
 
 
-    <!-- Sección: Experiencia -->
-    <div class="section experience" id="experience">
-        <h2 class="section-title">Experiencia Destacada</h2>
-        <ul class="experience-list">
-            <li><strong>Soporte TI en Enproyec:</strong> Administración de Active Directory, mantenimiento de servidores y gestión de inventario TI.</li>
-            <li><strong>BackOffice:</strong> Participación en validación funcional y documentación técnica.</li>
-        </ul>
-    </div>
 
     <!-- Sección: Contacto -->
     <div class="section contact"  id="contact">
@@ -119,7 +207,7 @@
             <a href="https://www.linkedin.com/in/stevenjuan-camacuarihuanca/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
             <a href="https://github.com/NevVinino" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
-        <a class="btn" href="CV_StevenCamacuari.pdf" download>Descargar CV</a>
+        <!-- <a class="btn" href="CV_StevenCamacuari.pdf" download>Descargar CV</a> -->
     </div>
 
     <!-- Pie de página -->

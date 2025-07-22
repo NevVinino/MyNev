@@ -18,12 +18,13 @@ gsap.from(".section", {
   ease: "power2.out" // Transición suave al final
 });
 
-// Animación para el botón de descarga del CV (.btn)
-// Hace que aparezca con un efecto de zoom desde escala 0
-gsap.from(".btn", {
-  duration: 1,                // Dura 1 segundo
-  scale: 0,                   // Empieza desde escala 0 (invisible y pequeño)
-  opacity: 0,                 // También empieza invisible
-  delay: 1.2,                 // Aparece después de las secciones
-  ease: "back.out(1.7)"       // Efecto con rebote hacia afuera (muy visual)
-});
+
+// Animación para el botón (desplegable) para celular
+
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
