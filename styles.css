@@ -1,62 +1,65 @@
-/* Estilo general del cuerpo */
+/* === Estilo general del cuerpo del documento === */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #0d0d0d; /* Color sacado de tu imagen */
-  color: #f0f0f0;            /* Texto claro para buen contraste */
-  padding-top: 100px;        /* Espacio para el navbar fijo */
+  font-family: Arial, sans-serif;          /* Fuente principal */
+  line-height: 1.6;                        /* Altura de línea para legibilidad */
+  margin: 0;                               /* Elimina margen por defecto */
+  padding: 0;                              /* Elimina padding por defecto */
+  background-color: #0d0d0d;               /* Fondo oscuro inspirado en tu imagen */
+  color: #f0f0f0;                          /* Texto claro para contraste */
+  padding-top: 100px;                      /* Espacio reservado para navbar fija */
 }
 
-/* Encabezado principal */
+/* === Encabezado general (nombre + título profesional) === */
 .header {
-  background: #007acc;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+  background: #007acc;                     /* Fondo azul vibrante */
+  color: white;                            /* Texto blanco */
+  padding: 2rem;                           /* Espaciado interno amplio */
+  text-align: center;                      /* Centra contenido */
 }
 
-/* Encabezado de sección */
+/* === Alternativa de encabezado (más oscuro), usada si .header es un <div> === */
 div.header {
-  background-color: #313131;
+  background-color: #313131;               /* Fondo gris oscuro */
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
-
-/* Aplica solo a secciones internas, no al header ni navbar */
+/* === Estilo común para todas las secciones principales (excepto navbar/header) === */
 .section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  padding: 2rem;                           /* Relleno interno */
+  max-width: 800px;                        /* Ancho máximo para legibilidad */
+  margin: auto;                            /* Centrado horizontal */
 }
 
+/* === Título de secciones secundarias === */
 h2 {
-  color: #007acc;
+  color: #007acc;                          /* Azul vibrante para destacar */
 }
 
+/* === Listas generales === */
 ul {
-  list-style-type: square;
+  list-style-type: square;                 /* Viñetas cuadradas */
   padding-left: 1.2rem;
 }
 
+/* === Enlaces generales === */
 a {
-  color: #007acc;
-  text-decoration: none;
+  color: #007acc;                          /* Azul para enlaces */
+  text-decoration: none;                   /* Sin subrayado */
 }
 
+/* === Botones tipo enlace === */
 a.btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background: #007acc;
   color: white;
-  border-radius: 5px;
+  border-radius: 5px;                      /* Bordes redondeados */
 }
 
-/* Pie de página */
+/* === Pie de página === */
 footer {
   text-align: center;
   padding: 1rem;
@@ -64,56 +67,59 @@ footer {
   margin-top: 2rem;
 }
 
-/* --- NUEVO: Navbar horizontal con menú hamburguesa --- */
+/* === NAVBAR FIJA superior === */
 .navbar {
-  background-color: #121212;
-  position: fixed;
+  background-color: #121212;              /* Fondo negro-gris oscuro */
+  position: fixed;                         /* Fijo en la parte superior */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px; /* Altura del navbar fija*/
-  z-index: 999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  height: 100px;                           /* Altura exacta para el header */
+  z-index: 999;                            /* Encima del resto del contenido */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra inferior sutil */
 }
 
+/* === Contenedor interior de la navbar === */
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%; /* Se ajusta a los 70px */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem; /* Solo padding lateral */
+  max-width: 1200px;                       /* Ancho máximo del contenedor */
+  margin: 0 auto;                          /* Centrado horizontal */
+  height: 100%;                            /* Igual altura que navbar */
+  display: flex;                           /* Distribuye elementos horizontalmente */
+  justify-content: space-between;         /* Logo a la izquierda, menú a la derecha */
+  align-items: center;                    /* Centrado vertical de los hijos */
+  padding: 0 1rem;                         /* Relleno lateral */
 }
 
-/* Logo o título de navbar (opcional) */
+/* === Logo o título de la navbar === */
 .logo {
   color: #f0f0f0;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-/* Contenedor de enlaces */
+/* === Contenedor de los enlaces del menú === */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2rem;                               /* Espacio entre enlaces */
 }
 
+/* === Estilo individual de enlaces en navbar === */
 .nav-links a {
   color: #f0f0f0;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease;            /* Efecto suave al pasar el cursor */
 }
 
+/* === Efecto hover sobre enlaces del navbar === */
 .nav-links a:hover {
   color: #007acc;
 }
 
-/* Botón menú hamburguesa */
+/* === Botón hamburguesa para vista móvil === */
 .menu-toggle {
-  display: none;
+  display: none;                           /* Oculto por defecto (se muestra en móvil) */
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -121,20 +127,20 @@ footer {
   cursor: pointer;
 }
 
-/* Scroll suave */
+/* === Scroll suave para anclas internas === */
 html {
   scroll-behavior: smooth;
 }
 
-/* --- Responsive: navegación adaptable a móvil --- */
+/* === NAVBAR Responsive para pantallas pequeñas === */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block;                        /* Muestra el botón hamburguesa */
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
+    display: none;                         /* Oculta enlaces inicialmente */
+    flex-direction: column;               /* Acomoda en vertical */
     background-color: #121212;
     position: absolute;
     top: 70px;
@@ -145,12 +151,11 @@ html {
   }
 
   .nav-links.show {
-    display: flex;
+    display: flex;                         /* Se muestra al activar el menú */
   }
 }
 
-
-/* Sección habilidades programación */
+/* === Lista de habilidades de programación (con íconos) === */
 .skill-list {
   list-style: none;
   padding: 0;
@@ -162,6 +167,7 @@ html {
   max-width: 800px;
 }
 
+/* === Estilo individual de cada habilidad === */
 .skill-list li {
   display: flex;
   flex-direction: column;
@@ -173,7 +179,7 @@ html {
 }
 
 .skill-list li:hover {
-  transform: scale(1.1);
+  transform: scale(1.1);                  /* Efecto de zoom al pasar el cursor */
 }
 
 .skill-list img {
@@ -181,7 +187,7 @@ html {
   height: 64px;
   object-fit: contain;
   margin-bottom: 0.5rem;
-  filter: drop-shadow(0 0 2px #007acc);
+  filter: drop-shadow(0 0 2px #007acc);   /* Sombra azul suave */
 }
 
 .skill-list span {
@@ -190,35 +196,37 @@ html {
   color: #aad4ff;
 }
 
-/* Estilo para la lista principal de certificados */
+/* === Lista de certificados (formato vertical) === */
 .skill-list-certificate {
-  list-style: none;              /* Quita los puntos de la lista principal */
-  padding: 0;                    /* Elimina el padding interno */
-  margin: 0;                     /* Elimina el margen externo */
-  display: flex;                 /* Usa flexbox para organizar en columna */
-  flex-direction: column;       /* Asegura que cada <li> esté en una fila vertical */
-  gap: 1.2rem;                   /* Espacio vertical entre cada certificado */
-  color: #f0f0f0;                /* Color de texto claro para el fondo oscuro */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: #f0f0f0;
 }
 
-/* Estilo para cada ítem de la lista de certificados */
+/* === Estilo de cada certificado === */
 .skill-list-certificate li {
   line-height: 1.6;
   font-size: 1rem;
 }
 
+/* === Sublista para cursos por institución === */
 .skill-list-certificate li ul {
   list-style: disc;
   margin-left: 1.5rem;
   margin-top: 0.5rem;
 }
 
+/* === Destacar nombres de instituciones en certificados === */
 .skill-list-certificate strong {
   color: #aad4ff;
   font-weight: bold;
 }
 
-/* Estilo para la lista de experiencia laboral o académica */
+/* === Lista de experiencia profesional o académica === */
 .experience-list {
   list-style: none;
   padding: 0;
@@ -234,24 +242,26 @@ html {
   font-size: 1rem;
 }
 
+/* === Subtareas o responsabilidades bajo una experiencia === */
 .experience-list li ul {
   list-style: disc;
   margin-left: 1.5rem;
   margin-top: 0.5rem;
 }
 
+/* === Resaltar puestos o empresas === */
 .experience-list strong {
   color: #aad4ff;
   font-weight: bold;
 }
 
-/* Estilos para los párrafos dentro de la lista de experiencia */
+/* === Párrafos dentro de experiencia === */
 .experience-list p {
   margin: 0.2rem 0;
   font-size: 1rem;
 }
 
-/* Bandera Perú */
+/* === Estilo para mostrar bandera peruana al lado del texto === */
 .bandera-peru {
   display: inline-flex;
   align-items: center;
