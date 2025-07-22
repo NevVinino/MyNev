@@ -25,6 +25,10 @@ gsap.from(".section", {
   const nav = document.getElementById('nav-links');
 
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    nav.classList.toggle('show');
   });
 
+
+
+
+  
