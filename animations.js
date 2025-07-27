@@ -29,6 +29,83 @@ gsap.from(".section", {
   });
 
 
+////////////////////////////////////
+
+// Registrar el plugin SplitText de GSAP
+gsap.registerPlugin(SplitText);
+
+// """" ANIMACIÓN PARA EL NOMBRE """""
 
 
-  
+// Variables para guardar el SplitText y la animación del nombre
+let splitNombre, animationNombre;
+
+// Función que anima el nombre dividiéndolo en palabras
+function animateNombre() {
+  // Revertir animación anterior (si existe) para evitar duplicaciones
+  animationNombre && animationNombre.revert();
+  splitNombre && splitNombre.revert();
+
+  // Crear la división del texto en palabras
+  splitNombre = new SplitText(".nombre-animado.text", { type: "words" });
+
+  // Animar cada palabra con desplazamiento vertical, opacidad y rotación
+  animationNombre = gsap.from(splitNombre.words, {
+    y: -100,                      // Desde arriba
+    opacity: 0,                   // Inicia invisible
+    rotation: "random(-80, 80)",  // Rotación aleatoria por palabra
+    duration: 0.7,
+    ease: "back",                 // Rebote suave
+    stagger: 0.15                 // Retraso entre palabras
+  });
+}
+
+
+// """" ANIMACIÓN PARA EL SUBTÍTULO """"
+
+// Variables para el SplitText y animación del subtítulo
+let splitSubtitulo, animationSubtitulo;
+
+// Función que anima el subtítulo dividiéndolo en caracteres
+function animateSubtitulo() {
+  // Revertir animaciones previas
+  animationSubtitulo && animationSubtitulo.revert();
+  splitSubtitulo && splitSubtitulo.revert();
+
+  // Crear división del texto en caracteres
+  splitSubtitulo = new SplitText(".subtitulo-animado.text", { type: "chars" });
+
+  // Animar cada carácter con desplazamiento, rotación y opacidad
+  animationSubtitulo = gsap.from(splitSubtitulo.chars, {
+    y: -100,                      // Desde arriba
+    opacity: 0,                   // Inicia invisible
+    rotation: "random(-80, 80)",  // Rotación aleatoria
+    duration: 0.7,
+    ease: "back",
+    stagger: 0.1                  // Retraso más corto entre caracteres
+  });
+}
+
+
+// """" EJECUTAR AMBAS ANIMACIONES AL CARGAR """""
+
+window.addEventListener("load", () => {
+  animateNombre();       // Ejecutar animación del nombre
+  animateSubtitulo();    // Ejecutar animación del subtítulo
+
+  // Repetir animaciones cada cierto tiempo (opcional)
+  setInterval(animateNombre, 4000);     // Cada 3 segundos
+  setInterval(animateSubtitulo, 4000);  // Cada 4 segundos
+});
+
+
+// """" AJUSTAR ANIMACIONES AL REDIMENSIONAR """""
+
+window.addEventListener("resize", () => {
+  // Reaplicar el SplitText al cambiar el tamaño de ventana
+  splitNombre && splitNombre.revert();
+  splitNombre = new SplitText(".nombre-animado.text", { type: "words" });
+
+  splitSubtitulo && splitSubtitulo.revert();
+  splitSubtitulo = new SplitText(".subtitulo-animado.text", { type: "chars" });
+});

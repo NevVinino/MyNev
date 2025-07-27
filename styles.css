@@ -30,6 +30,7 @@ div.header {
   padding: 2rem;                           /* Relleno interno */
   max-width: 800px;                        /* Ancho máximo para legibilidad */
   margin: auto;                            /* Centrado horizontal */
+  scroll-margin-top: 120px; /* Evita que los títulos se oculten al hacer clic en enlaces */
 }
 
 /* === Título de secciones secundarias === */
@@ -273,3 +274,29 @@ html {
   height: auto;
   vertical-align: middle;
 }
+
+/*nombre-animado*/
+
+.nombre-animado {
+  color: #007acc;
+  font-size: clamp(2rem,12rem, 5vw);
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding:5%;
+  width: 100%;
+  text-align: center;
+  perspective: 500px;
+}
+
+.subtitulo-animado {
+  color: #aad4ff;
+  font-size: clamp(1rem,11rem, 4vw);
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding:5%;
+  width: 100%;
+  text-align: center;
+  perspective: 500px;
+}
+
+
