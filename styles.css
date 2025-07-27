@@ -275,28 +275,35 @@ html {
   vertical-align: middle;
 }
 
-/*nombre-animado*/
+/*animación de encabezado principal*/
 
+/* Estilo para el nombre principal */
 .nombre-animado {
   color: #007acc;
-  font-size: clamp(2rem,12rem, 5vw);
+  font-size: clamp(2rem, 12rem, 5vw);
   line-height: 1.2;
   box-sizing: border-box;
-  padding:5%;
+  padding: 5%;
   width: 100%;
   text-align: center;
   perspective: 500px;
 }
 
+/* Estilo para el subtítulo */
 .subtitulo-animado {
   color: #aad4ff;
-  font-size: clamp(1rem,11rem, 4vw);
+  font-size: clamp(1rem, 11rem, 4vw);
   line-height: 1.2;
   box-sizing: border-box;
-  padding:5%;
+  padding: 5%;
   width: 100%;
   text-align: center;
   perspective: 500px;
 }
 
-
+.nombre-animado span,
+.subtitulo-animado span {
+  display: inline-block;
+  margin: 0 4px;
+  transform: translateY(0);
+}

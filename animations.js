@@ -29,83 +29,92 @@ gsap.from(".section", {
   });
 
 
-////////////////////////////////////
+////////////////////////////////////// 
 
-// Registrar el plugin SplitText de GSAP
-gsap.registerPlugin(SplitText);
+// === ANIMACIONES DE TEXTO CON GSAP (gratis para github) ===
 
-// """" ANIMACIÓN PARA EL NOMBRE """""
+// Este script envuelve el contenido textual en <span> para aplicar animaciones
+// personalizadas a cada palabra o carácter utilizando GSAP.
 
+// ---------- FUNCIONES PARA PREPARAR EL TEXTO ----------
 
-// Variables para guardar el SplitText y la animación del nombre
-let splitNombre, animationNombre;
+// Envuelve cada palabra dentro de un elemento en un <span class="word">
+// Esto permite animarlas individualmente (ideal para nombres o títulos cortos)
+function wrapWords(selector) {
+  const element = document.querySelector(selector);
+  if (!element) return;
 
-// Función que anima el nombre dividiéndolo en palabras
+  // Restaurar el contenido original por si ya estaba envuelto en spans
+  element.innerHTML = element.textContent;
+
+  // Separar el texto en palabras y envolver cada una
+  const words = element.textContent.trim().split(" ");
+  element.innerHTML = words.map(word => `<span class="word">${word}</span>`).join(" ");
+}
+
+// Envuelve cada carácter dentro de un elemento en <span class="char">
+// Reemplaza los espacios con &nbsp; para mantenerlos visibles
+function wrapChars(selector) {
+  const element = document.querySelector(selector);
+  if (!element) return;
+
+  // Restaurar el contenido original por si ya estaba envuelto
+  element.innerHTML = element.textContent;
+
+  // Dividir en caracteres y envolver cada uno
+  const chars = element.textContent.trim().split("");
+  element.innerHTML = chars.map(char => {
+    return char === " "
+      ? `<span class="char">&nbsp;</span>` // Espacio visible
+      : `<span class="char">${char}</span>`;
+  }).join("");
+}
+
+// ---------- FUNCIONES DE ANIMACIÓN CON GSAP ----------
+
+// Anima cada palabra con un efecto de caída y rotación
+// Se usa en el nombre principal (por palabras)
 function animateNombre() {
-  // Revertir animación anterior (si existe) para evitar duplicaciones
-  animationNombre && animationNombre.revert();
-  splitNombre && splitNombre.revert();
-
-  // Crear la división del texto en palabras
-  splitNombre = new SplitText(".nombre-animado.text", { type: "words" });
-
-  // Animar cada palabra con desplazamiento vertical, opacidad y rotación
-  animationNombre = gsap.from(splitNombre.words, {
-    y: -100,                      // Desde arriba
-    opacity: 0,                   // Inicia invisible
-    rotation: "random(-80, 80)",  // Rotación aleatoria por palabra
-    duration: 0.7,
-    ease: "back",                 // Rebote suave
-    stagger: 0.15                 // Retraso entre palabras
+  gsap.from(".nombre-animado .word", {
+    y: -100,                             // Aparece desde arriba
+    opacity: 0,                          // Inicia invisible
+    rotation: () => gsap.utils.random(-80, 80), // Rotación aleatoria
+    duration: 0.7,                       // Duración de cada palabra
+    ease: "back",                        // Efecto rebote
+    stagger: 0.15                        // Retraso entre palabras
   });
 }
 
-
-// """" ANIMACIÓN PARA EL SUBTÍTULO """"
-
-// Variables para el SplitText y animación del subtítulo
-let splitSubtitulo, animationSubtitulo;
-
-// Función que anima el subtítulo dividiéndolo en caracteres
+// Anima cada carácter con desplazamiento y rotación
+// Se usa en el subtítulo (por letras)
 function animateSubtitulo() {
-  // Revertir animaciones previas
-  animationSubtitulo && animationSubtitulo.revert();
-  splitSubtitulo && splitSubtitulo.revert();
-
-  // Crear división del texto en caracteres
-  splitSubtitulo = new SplitText(".subtitulo-animado.text", { type: "chars" });
-
-  // Animar cada carácter con desplazamiento, rotación y opacidad
-  animationSubtitulo = gsap.from(splitSubtitulo.chars, {
-    y: -100,                      // Desde arriba
-    opacity: 0,                   // Inicia invisible
-    rotation: "random(-80, 80)",  // Rotación aleatoria
+  gsap.from(".subtitulo-animado .char", {
+    y: -100,                             // Aparece desde arriba
+    opacity: 0,
+    rotation: () => gsap.utils.random(-80, 80),
     duration: 0.7,
     ease: "back",
-    stagger: 0.1                  // Retraso más corto entre caracteres
+    stagger: 0.1                         // Retraso entre letras
   });
 }
 
+// ---------- INICIALIZACIÓN AUTOMÁTICA ----------
 
-// """" EJECUTAR AMBAS ANIMACIONES AL CARGAR """""
-
+// Ejecutar todo al cargar la página
 window.addEventListener("load", () => {
-  animateNombre();       // Ejecutar animación del nombre
-  animateSubtitulo();    // Ejecutar animación del subtítulo
+  // Preparar los textos (dividir en spans)
+  wrapWords(".nombre-animado");
+  wrapChars(".subtitulo-animado");
 
-  // Repetir animaciones cada cierto tiempo (opcional)
-  setInterval(animateNombre, 4000);     // Cada 3 segundos
-  setInterval(animateSubtitulo, 4000);  // Cada 4 segundos
-});
+  // Lanzar las animaciones
+  animateNombre();
+  animateSubtitulo();
 
-
-// """" AJUSTAR ANIMACIONES AL REDIMENSIONAR """""
-
-window.addEventListener("resize", () => {
-  // Reaplicar el SplitText al cambiar el tamaño de ventana
-  splitNombre && splitNombre.revert();
-  splitNombre = new SplitText(".nombre-animado.text", { type: "words" });
-
-  splitSubtitulo && splitSubtitulo.revert();
-  splitSubtitulo = new SplitText(".subtitulo-animado.text", { type: "chars" });
+  // Repetir las animaciones cada 5 segundos (opcional)
+  setInterval(() => {
+    wrapWords(".nombre-animado");
+    wrapChars(".subtitulo-animado");
+    animateNombre();
+    animateSubtitulo();
+  }, 5000);
 });
