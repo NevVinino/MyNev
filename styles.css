@@ -307,3 +307,69 @@ html {
   margin: 0 4px;
   transform: translateY(0);
 }
+
+
+/* Proyectos Nuevos */
+
+/* Estructura de la lista de detalles del proyecto */
+.project-list {
+  list-style: square;
+  padding-left: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+.project-list li {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Justificación del texto de la descripción */
+.project-description .about-description {
+  text-align: justify;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin-top: 1rem;
+}
+
+/* Contenedor de la imagen (Estilo similar a .skill-list li) */
+.project-img-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 150px; /* Evita que se estire demasiado */
+}
+
+/* Enlace que envuelve la imagen y el texto */
+.project-img-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Efecto hover igual a tus habilidades */
+}
+
+/* Efecto Hover (Zoom) */
+.project-img-container a:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo de la imagen del proyecto */
+.project-img-container img {
+  width: 80px;  /* Un poco más grande que las habilidades para destacar */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 4px #007acc); /* Sombra azul vibrante de tu temática */
+}
+
+/* Texto debajo de la imagen */
+.project-img-container span {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #aad4ff; /* Azul claro de tus estilos */
+  font-weight: bold;
+}

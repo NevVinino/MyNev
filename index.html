@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +9,39 @@
     <!-- Archivo que contiene configuración CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-        <!-- Barra de navegación -->
+    <!-- Barra de navegación -->
     <div class="navbar">
-    <div class="nav-container">
-        <div class="logo">Mi Portafolio</div>
+        <div class="nav-container">
+            <div class="logo">Mi Portafolio</div>
 
-        <!-- Botón hamburguesa -->
-        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+            <!-- Botón hamburguesa -->
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
 
-        <!-- Enlaces de navegación -->
-        <nav class="nav-links" id="nav-links">
-        <a href="#sobre-mi">Sobre Mí</a>
-        <a href="#certificate">Certificados</a>
-        <a href="#skills-programming">Habilidades de Programación</a>
-        <a href="#experience">Experiencia</a>
-        <a href="#contact">Contacto</a>
-        </nav>
-    </div>
+            <!-- Enlaces de navegación -->
+            <nav class="nav-links" id="nav-links">
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#certificate">Certificados</a>
+                <a href="#skills-programming">Habilidades de Programación</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#projects" style="color: red">Proyectos</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
     </div>
 
 
     <!-- Encabezado principal -->
     <div class="header">
-    <div class="nombre-animado">
-        Steven Juan Camacuari Huanca
-    </div>
+        <div class="nombre-animado">
+            Steven Juan Camacuari Huanca
+        </div>
 
-    <div class="subtitulo-animado">
-        Bachiller en Ingeniería de Sistemas
-    </div>
+        <div class="subtitulo-animado">
+            Bachiller en Ingeniería de Sistemas
+        </div>
     </div>
 
 
@@ -48,17 +51,17 @@
         <h2 class="section-title">Sobre mí</h2>
         <h1>¡Hola!</h1>
         <p>
-            Tengo 23 años y soy de Lima, 
+            Tengo 23 años y soy de Lima,
             <span class="bandera-peru">
-            Perú <img src="peru.gif" alt="Bandera de Perú">
+                Perú <img src="../img/peru.gif" alt="Bandera de Perú">
             </span>
         </p>
-        <p>
-            Soy bachiller en Ingeniería de Sistemas por la Universidad Tecnológica 
+        <p class="about-description">
+            Soy bachiller en Ingeniería de Sistemas por la Universidad Tecnológica
             del Perú (UTP), con experiencia laboral en Soporte TI, y conocimientos
             en proyectos de Desarrollo Web e Inteligencia de negocios.
             Me gusta trabajar en equipo, aportar ideas, enfrentar retos
-            y hacer preguntas cuando no sé algo, porque eso me ayuda a seguir 
+            y hacer preguntas cuando no sé algo, porque eso me ayuda a seguir
             creciendo profesionalmente.
         </p>
     </div>
@@ -66,88 +69,88 @@
 
     <!-- Sección: Certificados -->
     <div class="section skills" id="certificate">
-    <h2 class="section-title">Certificados</h2>
-    <ul class="skill-list-certificate">
-        <li>
-        <strong>PIT UNI</strong>
-        <ul>
-            <li>SQL Server (Básico)</li>
-            <li>Power BI (Básico)</li>
+        <h2 class="section-title">Certificados</h2>
+        <ul class="skill-list-certificate">
+            <li>
+                <strong>PIT UNI</strong>
+                <ul>
+                    <li>SQL Server (Básico)</li>
+                    <li>Power BI (Básico)</li>
+                </ul>
+            </li>
+
+            <li><strong>CertiProf:</strong> Scrum Foundation Professional Certification - SFPC</li>
+
+            <li><strong>Scrum Study:</strong> Scrum Fundamentals Certified (SFC)</li>
+
+            <li>
+                <strong>Cisco</strong>
+                <ul>
+                    <li>CCNAv7: Introducción a Redes</li>
+                    <li>CCNAv7: Switching, Routing y Wireless Essentials</li>
+                </ul>
+            </li>
+
+            <li><strong>SISE:</strong> Técnico Especialista MS-Office Estándar</li>
         </ul>
-        </li>
-
-        <li><strong>CertiProf:</strong> Scrum Foundation Professional Certification - SFPC</li>
-
-        <li><strong>Scrum Study:</strong> Scrum Fundamentals Certified (SFC)</li>
-
-        <li>
-        <strong>Cisco</strong>
-        <ul>
-            <li>CCNAv7: Introducción a Redes</li>
-            <li>CCNAv7: Switching, Routing y Wireless Essentials</li>
-        </ul>
-        </li>
-
-        <li><strong>SISE:</strong> Técnico Especialista MS-Office Estándar</li>
-    </ul>
     </div>
 
 
-        <!-- Sección: Habilidades programación -->
+    <!-- Sección: Habilidades programación -->
     <div class="section skills programming" id="skills-programming">
         <h2 class="section-title">Habilidades de Programación</h2>
         <ul class="skill-list">
             <li>
-                <img src="html.png" alt="HTML" />
+                <img src="../img/html.png" alt="HTML" />
                 <span>HTML (Intermedio)</span>
             </li>
 
             <li>
-                <img src="css.png" alt="CSS" />
+                <img src="../img/css.png" alt="CSS" />
                 <span>CSS (Intermedio)</span>
             </li>
 
             <li>
-                <img src="js.png" alt="JavaScript" />
+                <img src="../img/js.png" alt="JavaScript" />
                 <span>JavaScript (Básico)</span>
             </li>
 
             <li>
-                <img src="Laravel.png" alt="PHP (Laravel)" />
+                <img src="../img/Laravel.png" alt="PHP (Laravel)" />
                 <span>PHP (Laravel) (Intermedio)</span>
             </li>
-            
+
             <li>
-                <img src="git.png" alt="Git" />
+                <img src="../img/git.png" alt="Git" />
                 <span>Git (Básico)</span>
             </li>
-            
+
             <li>
-                <img src="github.png" alt="GitHub" />
+                <img src="../img/github.png" alt="GitHub" />
                 <span>GitHub (Básico)</span>
             </li>
         </ul>
     </div>
 
-            <!-- Sección: Habilidades Inteligencia de negocios -->
+    <!-- Sección: Habilidades Inteligencia de negocios -->
     <div class="section skills programming" id="skills-programming">
         <h2 class="section-title">Habilidades de Inteligencia de Negocios</h2>
-        <ul class="skill-list">   
+        <ul class="skill-list">
             <li>
-                <img src="sqlServer.png" alt="SQL" />
+                <img src="../img/sqlServer.png" alt="SQL" />
                 <span>SQL Server (Intermedio)</span>
             </li>
 
             <li>
-                <img src="PowerBI.png" alt="Power BI" />
+                <img src="../img/PowerBI.png" alt="Power BI" />
                 <span>Power BI (Básico)</span>
-            </li>         
+            </li>
         </ul>
     </div>
 
 
 
-<!-- Sección: Experiencia -->
+    <!-- Sección: Experiencia -->
     <div class="section experience" id="experience">
         <h2 class="section-title">Experiencia Laboral</h2>
         <ul class="experience-list">
@@ -159,38 +162,38 @@
 
                 <ul>
                     <li>
-                        Ejecuté tareas de soporte técnico (Helpdesk), resolviendo 
-                        incidencias y configurando estaciones de trabajo, impresoras 
+                        Ejecuté tareas de soporte técnico (Helpdesk), resolviendo
+                        incidencias y configurando estaciones de trabajo, impresoras
                         y dispositivos de red para usuarios finales.
                     </li>
-                    
+
                     <li>
-                        Colaboré en la administración de Microsoft Active 
-                        Directory, gestionando usuarios, carpetas 
-                        compartidas, servicios de DNS, DHCP y acceso remoto 
+                        Colaboré en la administración de Microsoft Active
+                        Directory, gestionando usuarios, carpetas
+                        compartidas, servicios de DNS, DHCP y acceso remoto
                         dentro del dominio corporativo.
                     </li>
 
                     <li>
-                        Participé en el mantenimiento de servidores, 
-                        incluyendo reemplazo de hardware, gestión y 
+                        Participé en el mantenimiento de servidores,
+                        incluyendo reemplazo de hardware, gestión y
                         restauración de imágenes de sistema.
                     </li>
-                    
+
                     <li>
                         Realicé tareas de mantenimiento en bases de datos: restauración
                         de respaldos, monitoreo de jobs y migración de servidores de
-                        base de datos. 
+                        base de datos.
                     </li>
-                    
+
                     <li>
-                        Apoyé en la implementación de políticas de seguridad, supervisión 
-                        de firewalls y coordinación con proveedores externos para asegurar 
+                        Apoyé en la implementación de políticas de seguridad, supervisión
+                        de firewalls y coordinación con proveedores externos para asegurar
                         la conectividad.
                     </li>
 
                     <li>
-                        Contribuí en proyectos de desarrollo de software como BackOffice 
+                        Contribuí en proyectos de desarrollo de software como BackOffice
                         (ERP), realizando pruebas funcionales y validación técnica.
                     </li>
 
@@ -203,24 +206,52 @@
         </ul>
     </div>
 
+    <div class="section projects" id="projects">
+        <h2 class="section-title">Proyectos</h2>
 
+        <div class="project-img-container">
+            <a href="https://conejotako.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="../img/conejotako.png" alt="Conejotako Web App" />
+                <span>Visitar Proyecto</span>
+            </a>
+        </div>
+
+        <ul class="project-list">
+            <li><strong>Conejotako Web App — Full-Stack Developer</strong></li>
+            <li>Rol: Desarrollador Web Junior</li>
+            <li>Frontend: HTML5, CSS3 (Grid/Flexbox), JavaScript</li>
+            <li>Backend: JavaScript (Async/Await), YouTube Data API v3 (Google Cloud Platform)</li>
+            <li>Base de Datos: Supabase (PostgreSQL)</li>
+            <li>Gestor de versiones: Git y GitHub</li>
+            <li>Despliegue y Hosting: <a href="https://conejotako.vercel.app/" target="_blank"
+                    rel="noopener noreferrer">Vercel (conejotako.vercel.app)</a></li>
+        </ul>
+
+        <p class="project-description">
+            <strong>Descripción:</strong><br>
+            Diseño, desarrollo y despliegue de una plataforma web dinámica estilo catálogo multimedia para un
+            creador de contenido de YouTube. Implementé una arquitectura basada en Supabase que actúa como un gestor de
+            contenido dinámico y sistema de caché inteligente; esto permite actualizar todo el contenido visual de la
+            página (videos de YouTube, biblioteca multimedia, PDFs) mediante la base de datos sin necesidad de
+            modificar el código fuente. Además, automatiza la sincronización de videos recientes y directos optimizando
+            las cuotas de la API de YouTube.
+        </p>
+    </div>
 
     <!-- Sección: Contacto -->
-    <div class="section contact"  id="contact">
+    <div class="section contact" id="contact">
         <h2 class="section-title">Contacto</h2>
         <p>📧 <a href="mailto:stevencam010@outlook.com">stevencam010@outlook.com</a></p>
         <p>📱 +51 934096696</p>
-        <p>🌐 
-            <a href="https://www.linkedin.com/in/stevenjuan-camacuarihuanca/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+        <p>🌐
+            <a href="https://www.linkedin.com/in/stevenjuan-camacuarihuanca/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a> |
             <a href="https://github.com/NevVinino" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
         <!-- <a class="btn" href="CV_StevenCamacuari.pdf" download>Descargar CV</a> -->
     </div>
 
-    <!-- Pie de página -->
-    <!-- <div class="footer">
-        <p>&copy; 2025 Steven Camacuari</p>
-    </div> -->
+
 
 </body>
 
@@ -228,5 +259,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <!-- Archivo que contiene configuración GSAP -->
-    <script src="animations.js"></script>
+<script src="animations.js"></script>
+
 </html>
